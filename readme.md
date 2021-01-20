@@ -1,4 +1,5 @@
-# folderS and contents
+
+# folders and their contents
 integration: BDD test scenarios.
 plugin/index.js: plugin configs - used to configure Cucumber.
 support: steps, scripts and element mapping for our tests.

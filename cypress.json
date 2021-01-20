@@ -1,1 +1,11 @@
-{}
+{
+    "viewportWidth": 1024,
+    "viewportHeight": 768,
+    "defaultCommandTimeout": 10000,
+    "testFiles": "**/*.{feature,features}",
+    "baseUrl": "https://www.google.com",
+    "reporter": "junit",
+    "reporterOptions": {
+        "mochaFile": "cypress/reports/report-[hash].xml"
+    }
+}
