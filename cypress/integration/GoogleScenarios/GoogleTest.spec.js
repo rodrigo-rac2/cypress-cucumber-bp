@@ -1,5 +1,5 @@
 import { Given } from "cypress-cucumber-preprocessor/steps";
-import { GooglePage } from "../../pages/GooglePage";
+import { GooglePage } from "../../support/pages/GooglePage";
 
 Given('I open Google page', () => {
   GooglePage.load()
