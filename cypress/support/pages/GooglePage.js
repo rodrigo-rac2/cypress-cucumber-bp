@@ -1,5 +1,6 @@
+import { GoogleResultsPage } from "./GoogleResultsPage"
 const SEARCH_FIELD = 'input[type=text]';
-const SEARCH_BUTTON = 'input[type=submit]';
+const SEARCH_BUTTON = 'input[name=btnK]';
 const url = "http://www.google.com";
 
 export class GooglePage {
@@ -9,13 +10,12 @@ export class GooglePage {
   static load() {
     cy.visit(url);
   }
-  static type(query) {
+  type(query) {
     cy.get(SEARCH_FIELD) // 2 seconds
       .type(query);
   }
-  static pressSearch() {
-    cy.get(SEARCH_BUTTON).contains(SEARCH_TEXT)
-      .click();
+  pressSearch() {
+    cy.get(SEARCH_BUTTON).eq(0).click( {force: true} );
     return new GoogleResultsPage();
   }
   titleContains(text) {
